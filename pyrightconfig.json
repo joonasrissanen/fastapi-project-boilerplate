@@ -1,0 +1,36 @@
+{
+  "include": ["app"],
+
+  "exclude": ["**/__pycache__"],
+
+  "typeCheckingMode": "strict",
+
+  "defineConstant": {
+    "DEBUG": true
+  },
+
+  "reportMissingImports": "error",
+  "enableTypeIgnoreComments": false,
+  "reportMissingTypeStubs": false,
+  "reportUnknownMemberType": false,
+  "reportUnknownVariableType": false,
+  "reportUnknownArgumentType": false,
+
+  "reportUnusedExpression": "error",
+  "reportUnnecessaryTypeIgnoreComment": "error",
+  "reportMatchNotExhaustive": "error",
+  "reportImplicitOverride": "error",
+  "reportUntypedFunctionDecorator": "error",
+  "reportUntypedClassDecorator": "error",
+  "reportUntypedBaseClass": "error",
+  "reportPrivateUsage": "error",
+
+  "pythonVersion": "3.12",
+  "pythonPlatform": "Linux",
+
+  "executionEnvironments": [
+    {
+      "root": "."
+    }
+  ]
+}
