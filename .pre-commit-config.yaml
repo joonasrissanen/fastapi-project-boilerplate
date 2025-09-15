@@ -1,0 +1,27 @@
+---
+default_install_hook_types:
+  - pre-commit
+fail_fast: true
+repos:
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    # uv version.
+    rev: 0.8.17
+    hooks:
+      - id: uv-lock
+  - repo: https://github.com/RobertCraigie/pyright-python
+    rev: v1.1.405
+    hooks:
+      - id: pyright
+        name: pyright
+        entry: uv run pyright -p .
+        language: system
+        pass_filenames: false
+        types: [python]
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.12.11
+    hooks:
+      # Run the linter.
+      - id: ruff-check
+        args: [--fix]
+      # Run the formatter.
+      - id: ruff-format
