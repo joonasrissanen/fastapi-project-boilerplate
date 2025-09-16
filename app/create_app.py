@@ -38,7 +38,7 @@ def register_exception_handlers(app: FastAPI) -> None:
         logger.error("Unhandled exception", exc_info=exc)
         return JSONResponse(
             status_code=500,
-            content={"detail": "Internal server error. Please try again later."},
+            content={"detail": "Internal server error"},
         )
 
 
@@ -51,7 +51,6 @@ def create_app():
         lifespan=init_lifespan(),
     )
     register_exception_handlers(app)
-    logger.info("Yoyo Starting application", extra={"asd": 123})
     app.include_router(router)
 
     return app
