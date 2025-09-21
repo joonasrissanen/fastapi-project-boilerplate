@@ -7,7 +7,7 @@ FastAPI boilerplate that creates async API using FastAPI, Pydantic V2, SQLAlchem
 ## Requirements
 
 - [uv](https://github.com/astral-sh/uv) - Python package and project manager
-- docker-compose
+- docker
 
 ## Useful commands
 
